@@ -14,6 +14,7 @@ class _LoginPageState extends State<LoginPage> {
     double h = MediaQuery.of(context).size.height;
     return Scaffold(
       backgroundColor: Colors.white,
+      resizeToAvoidBottomInset: false,
       body: Column(
         children: [
           Container(
@@ -84,7 +85,7 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(height: h*0.02,),
                 Container(
                   decoration: BoxDecoration(
                       color: Colors.white,
@@ -120,14 +121,14 @@ class _LoginPageState extends State<LoginPage> {
                     ),
                   ),
                 ),
-                SizedBox(height: 20,),
+                SizedBox(height: 10,),
                 Row(
                   children: [
                     Expanded(child: Container(),),
                     Text(
                       "Forgot your Password?",
                       style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 18,
                           color: Colors.grey[500]
                       ),
                     )
@@ -137,7 +138,7 @@ class _LoginPageState extends State<LoginPage> {
               ],
             ),
           ),
-          SizedBox(height: h*0.05,),
+          SizedBox(height: h*0.065,),
           Container(
             width: w*0.5,
             height: h*0.08,
@@ -161,13 +162,23 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          SizedBox(height: w*0.08,),
+          SizedBox(height: h*0.075,),
           RichText(text: TextSpan(
             text: "Don't have an account?",
             style: TextStyle(
               color: Colors.grey[500],
               fontSize: 20
-            )
+            ),
+            children: const [
+              TextSpan(
+              text: " Create",
+              style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold
+              )
+              )
+            ]
           ))
         ],
       ),
