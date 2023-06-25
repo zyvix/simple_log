@@ -162,7 +162,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
           ),
-          SizedBox(height: h*0.075,),
+          SizedBox(height: h*0.06,),
           RichText(text: TextSpan(
             text: "Don't have an account?",
             style: TextStyle(
