@@ -1,4 +1,6 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SignUpPage extends StatelessWidget {
   const SignUpPage({super.key});
@@ -154,7 +156,7 @@ class SignUpPage extends StatelessWidget {
             ),
             child:Center(
               child: Text(
-                "Sign in",
+                "Sign up",
                 style: TextStyle(
                     fontSize: 36,
                     fontWeight: FontWeight.bold,
@@ -162,6 +164,17 @@ class SignUpPage extends StatelessWidget {
                 ),
               ),
             ),
+          ),
+          SizedBox(height: 10,),
+          RichText(
+            text: TextSpan(
+              recognizer: TapGestureRecognizer()..onTap=()=>Get.back(),
+              text: "Have an account?",
+              style: TextStyle(
+                fontSize: 20,
+                color: Colors.grey[500]
+              )
+            )
           ),
           SizedBox(height: h*0.06,),
           RichText(text: TextSpan(
