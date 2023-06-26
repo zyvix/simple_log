@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:simple_log/signup_page.dart';
+import 'package:simple_log/welcome_page.dart';
 
 import 'login_page.dart';
 
@@ -19,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const LoginPage()
+      home: WelcomePage()
     );
   }
 }
